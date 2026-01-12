@@ -5,13 +5,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const navMobile = document.getElementById('navMobile');
     
     if (botaoMenu) {
-        // Alterna abertura do menu
         botaoMenu.addEventListener('click', () => {
             navMobile.classList.toggle('ativo');
             botaoMenu.innerHTML = navMobile.classList.contains('ativo') ? '✕' : '☰';
         });
         
-        // Fecha ao clicar em um link
         navMobile.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => navMobile.classList.remove('ativo'));
         });
@@ -21,13 +19,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const modalServico = document.getElementById('modalServico');
     const modalContato = document.getElementById('modalContato');
     
-    // Conteúdo Modal Serviço
     const imgModal = document.getElementById('imgModal');
     const tituloModal = document.getElementById('tituloModal');
     const descModal = document.getElementById('descModal');
     const btnContratarEspecifico = document.getElementById('btnContratarEspecifico');
     
-    // Formulário
     const selectServico = document.getElementById('selectServico');
 
     // --- 3. Dados dos Serviços ---
@@ -62,20 +58,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 tituloModal.textContent = dados.titulo;
                 descModal.textContent = dados.desc;
                 imgModal.src = dados.img; 
-                
-                // Configura botão de contratação
                 btnContratarEspecifico.setAttribute('data-valor-alvo', dados.valorFormulario);
-                
                 modalServico.style.display = 'block';
             }
         });
     });
 
-    // --- 5. Botão "Quero Contratar" (no Modal) ---
+    // --- 5. Botão Contratar (dentro do modal) ---
     if(btnContratarEspecifico) {
         btnContratarEspecifico.addEventListener('click', () => {
             const valorAlvo = btnContratarEspecifico.getAttribute('data-valor-alvo');
-            
             modalServico.style.display = 'none';
             modalContato.style.display = 'block';
             
@@ -91,9 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             modalServico.style.display = 'none';
             modalContato.style.display = 'block';
-            
-            // Reseta o select
-            if(selectServico) selectServico.value = ""; 
+            if(selectServico) selectServico.value = ""; // Reseta seleção
         });
     });
 
@@ -123,24 +113,24 @@ document.addEventListener('DOMContentLoaded', function() {
     const spanAno = document.getElementById('ano');
     if(spanAno) spanAno.textContent = new Date().getFullYear();
 
-    // --- 10. Envio do Formulário ---
+    // --- 10. Formulário (Visual) ---
     const formContato = document.getElementById('formContato');
     if (formContato) {
+        // Se usar Formspree, remova este bloco para que o envio seja real
+        // Caso contrário, mantenha para teste visual:
+        /*
         formContato.addEventListener('submit', (e) => {
             e.preventDefault();
             const btn = formContato.querySelector('button');
             const textoOriginal = btn.textContent;
-            
-            btn.textContent = 'Enviando...'; 
-            btn.disabled = true;
-            
+            btn.textContent = 'Enviando...'; btn.disabled = true;
             setTimeout(() => {
-                alert('Solicitação enviada com sucesso!');
+                alert('Solicitação enviada!');
                 formContato.reset();
                 modalContato.style.display = 'none';
-                btn.textContent = textoOriginal; 
-                btn.disabled = false;
+                btn.textContent = textoOriginal; btn.disabled = false;
             }, 1500);
         });
+        */
     }
 });
