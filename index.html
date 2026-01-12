@@ -5,21 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Protech Engenharia - Soluções em Aerolevantamento e Inspeção com Drones</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
+    
+    <header class="cabecalho">
+        <div class="conteiner">
+            <div class="cabecalho-conteudo">
                 <a href="#" class="logo">
                     <img src="assets/protech-logo-nobg.png" alt="Protech Engenharia" class="logo-img">
-                    <span class="logo-text">Protech Engenharia</span>
+                    <span class="logo-texto">Protech Engenharia</span>
                 </a>
                 
                 <nav class="nav-desktop">
                     <a href="#servicos">Serviços</a>
                     <a href="#portfolio">Portfólio</a>
                     <a href="#sobre">Sobre</a>
-                    <a href="#contato">Contato</a>
+                    <button class="btn-nav btn-abrir-contato">Falar com Especialista</button>
                 </nav>
 
                 <button class="menu-toggle" id="menuToggle">☰</button>
@@ -29,86 +31,108 @@
                 <a href="#servicos">Serviços</a>
                 <a href="#portfolio">Portfólio</a>
                 <a href="#sobre">Sobre</a>
-                <a href="#contato">Contato</a>
+                <a href="#" class="btn-abrir-contato">Solicitar Orçamento</a>
             </nav>
         </div>
     </header>
 
     <main>
         <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-brand">
-                        <img src="assets/protech-logo-nobg.png" alt="Protech Engenharia" class="brand-logo">
-                    </div>
-
-                    <h1>Engenharia de Precisão e Inspeções com <span class="highlight">Drones</span></h1>
+            <div class="conteiner">
+                <div class="hero-conteudo revelar">
+                    <span class="hero-subtitulo">PROTECH ENGENHARIA</span>
+                    <h1>Engenharia de Precisão e Inspeções com <span class="destaque">Drones</span></h1>
                     
                     <p>Aerolevantamento, Mapeamento 3D e Termografia. Tecnologia de ponta para reduzir custos e aumentar a segurança da sua obra.</p>
                     
-                    <div class="hero-buttons">
-                        <a href="#contato" class="btn btn-primary">Solicitar Orçamento →</a>
-                        <a href="#servicos" class="btn btn-secondary">Nossos Serviços</a>
+                    <div class="hero-botoes">
+                        <button class="btn btn-primario btn-abrir-contato">Solicitar Orçamento →</button>
+                        <a href="#servicos" class="btn btn-secundario">Conhecer Soluções</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="servicos" class="services">
-            <div class="container">
-                <div class="section-header">
+        <section id="servicos" class="servicos">
+            <div class="conteiner">
+                <div class="secao-cabecalho revelar">
                     <h2>Nossos Serviços</h2>
-                    <p>Oferecemos soluções completas em tecnologia de drones para diversos segmentos.</p>
+                    <p>Soluções completas em tecnologia de drones personalizadas para a sua necessidade.</p>
                 </div>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-icon">📍</div>
+                <div class="servicos-grid">
+                    <div class="cartao-servico revelar">
+                        <div class="servico-icone">📍</div>
                         <h3>Mapeamento 3D</h3>
-                        <p>Captura de dados geoespaciais de alta precisão para projetos de engenharia e construção.</p>
-                        <ul class="features">
-                            <li>• Modelos 3D em alta resolução</li>
-                            <li>• Ortofotos e mapas de contorno</li>
-                            <li>• Processamento com IA</li>
-                            <li>• Relatórios detalhados</li>
+                        <p>Captura de dados geoespaciais de alta precisão para projetos de engenharia, topografia e acompanhamento de obras.</p>
+                        <ul class="lista-recursos">
+                            <li>• Modelos Digitais de Terreno (MDT)</li>
+                            <li>• Ortofotos de alta resolução</li>
+                            <li>• Cálculo volumétrico preciso</li>
                         </ul>
+                        <button class="btn-saiba-mais" data-servico="mapeamento">Ver Detalhes +</button>
                     </div>
-                    <div class="service-card">
-                        <div class="service-icon">🏢</div>
+                    <div class="cartao-servico revelar">
+                        <div class="servico-icone">🏢</div>
                         <h3>Inspeção Predial</h3>
-                        <p>Análise estrutural completa de edifícios, pontes e infraestruturas.</p>
-                        <ul class="features">
-                            <li>• Inspeção de fachadas</li>
-                            <li>• Análise de estruturas</li>
-                            <li>• Detecção de danos</li>
-                            <li>• Documentação visual</li>
+                        <p>Análise estrutural completa de edifícios, pontes e infraestruturas, garantindo segurança e agilidade na coleta de dados.</p>
+                        <ul class="lista-recursos">
+                            <li>• Inspeção visual de fachadas em 4K</li>
+                            <li>• Identificação de fissuras e patologias</li>
+                            <li>• Relatórios técnicos detalhados</li>
                         </ul>
+                        <button class="btn-saiba-mais" data-servico="inspecao">Ver Detalhes +</button>
                     </div>
-                    <div class="service-card">
-                        <div class="service-icon">🌡️</div>
+                    <div class="cartao-servico revelar">
+                        <div class="servico-icone">🌡️</div>
                         <h3>Inspeção Termográfica</h3>
-                        <p>Detecção de anomalias térmicas em sistemas elétricos e estruturais.</p>
-                        <ul class="features">
-                            <li>• Câmeras térmicas avançadas</li>
-                            <li>• Análise de isolamento</li>
-                            <li>• Detecção de falhas</li>
-                            <li>• Relatórios técnicos</li>
+                        <p>Detecção de anomalias térmicas invisíveis a olho nu em sistemas elétricos, painéis solares e estruturas prediais.</p>
+                        <ul class="lista-recursos">
+                            <li>• Detecção de infiltrações ocultas</li>
+                            <li>• Análise de superaquecimento elétrico</li>
+                            <li>• Eficiência energética</li>
                         </ul>
+                        <button class="btn-saiba-mais" data-servico="termografia">Ver Detalhes +</button>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="sobre" class="about">
-            <div class="container">
-                <div class="about-grid">
-                    <div class="about-content">
+        <section id="sobre" class="sobre">
+            <div class="conteiner">
+                <div class="sobre-wrapper revelar">
+                    <div class="sobre-conteudo">
                         <h2>Sobre Nossa Empresa</h2>
-                        <p>Somos uma empresa especializada em soluções de mapeamento e inspeção utilizando tecnologia de drones de última geração.</p>
-                        <p>Com uma equipe de profissionais certificados e experientes, garantimos a qualidade e precisão em cada projeto realizado.</p>
-                        <div class="about-features">
-                            <div class="feature"><span class="check">✓</span><div><h4>Certificação Profissional</h4><p>Todos os pilotos são treinados e capacitados</p></div></div>
-                            <div class="feature"><span class="check">✓</span><div><h4>Equipamento Moderno</h4><p>Drones e câmeras de última geração</p></div></div>
-                            <div class="feature"><span class="check">✓</span><div><h4>Seguro Completo</h4><p>Cobertura total de responsabilidade civil</p></div></div>
+                        <p class="texto-destaque">Executamos soluções de mapeamento e inspeção aérea, unindo a engenharia civil tradicional à tecnologia de drones de última geração.</p>
+                        
+                        <ul class="sobre-lista-texto">
+                            <li><strong>Missão Técnica:</strong> Transformar dados complexos em informações claras e acionáveis.</li>
+                            <li><strong>Equipe Especializada:</strong> Engenheiros experientes e pilotos certificados.</li>
+                            <li><strong>Compromisso:</strong> Qualidade, segurança jurídica e precisão técnica.</li>
+                            <li><strong>Tecnologia:</strong> Equipamentos de ponta e softwares avançados.</li>
+                        </ul>
+                        
+                        <div class="sobre-recursos">
+                            <div class="recurso">
+                                <span class="check">✓</span>
+                                <div>
+                                    <h4>Certificação Profissional</h4>
+                                    <p>Pilotos licenciados e normas ANAC/DECEA.</p>
+                                </div>
+                            </div>
+                            <div class="recurso">
+                                <span class="check">✓</span>
+                                <div>
+                                    <h4>Equipamento Moderno</h4>
+                                    <p>Sensores RGB 4K e Térmicos.</p>
+                                </div>
+                            </div>
+                            <div class="recurso">
+                                <span class="check">✓</span>
+                                <div>
+                                    <h4>Segurança Total</h4>
+                                    <p>Seguro RETA e análise de risco.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -116,54 +140,143 @@
         </section>
 
         <section id="portfolio" class="portfolio">
-            <div class="container">
-                <div class="section-header"><h2>Portfólio</h2><p>Confira alguns dos nossos projetos realizados com sucesso.</p></div>
+            <div class="conteiner">
+                <div class="secao-cabecalho revelar">
+                    <h2>Portfólio</h2>
+                    <p>Confira a qualidade das nossas entregas.</p>
+                </div>
                 <div class="portfolio-grid">
-                    <div class="portfolio-card"><div class="portfolio-image"><img src="assets/MDT.png" alt="Tratamento de Imagem"></div><div class="portfolio-content"><h3>Mapeamento 3D</h3><p>Mapeamento de alta precisão para topografia e engenharia.</p></div></div>
-                    <div class="portfolio-card"><div class="portfolio-image"><img src="assets/Estrutura.JPG" alt="Imagem de termografia"></div><div class="portfolio-content"><h3>Inspeção Predial</h3><p>Análise detalhada de estruturas verticais.</p></div></div>
-                    <div class="portfolio-card"><div class="portfolio-image"><img src="assets/Termografia.png" alt="Termografia"></div><div class="portfolio-content"><h3>Análise Termográfica</h3><p>Detecção de falhas e infiltrações via calor.</p></div></div>
+                    <div class="cartao-portfolio revelar">
+                        <div class="portfolio-imagem"><img src="assets/MDT.png" alt="Mapeamento Digital"></div>
+                        <div class="portfolio-conteudo">
+                            <h3>Topografia Digital</h3>
+                            <p>Modelos Digitais de Terreno (MDT) gerados via fotogrametria.</p>
+                        </div>
+                    </div>
+                    <div class="cartao-portfolio revelar">
+                        <div class="portfolio-imagem"><img src="assets/Estrutura.JPG" alt="Inspeção Estrutural"></div>
+                        <div class="portfolio-conteudo">
+                            <h3>Laudo Estrutural</h3>
+                            <p>Inspeção detalhada de patologias em grandes altitudes.</p>
+                        </div>
+                    </div>
+                    <div class="cartao-portfolio revelar">
+                        <div class="portfolio-imagem"><img src="assets/Termografia.png" alt="Termografia"></div>
+                        <div class="portfolio-conteudo">
+                            <h3>Análise Térmica</h3>
+                            <p>Identificação precisa de falhas em painéis e redes elétricas.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-acao revelar">
+                    <p>Gostou do que viu? Vamos planejar o seu projeto.</p>
+                    <button class="btn btn-primario btn-abrir-contato">Solicitar Orçamento Personalizado</button>
                 </div>
             </div>
         </section>
 
-        <section class="video-highlight">
-            <div class="container">
-                <div class="section-header"><h2>Operação em Campo</h2><p>Veja nossa tecnologia em ação.</p></div>
+        <section class="video-destaque revelar">
+            <div class="conteiner">
+                <div class="secao-cabecalho"><h2>Operação em Campo</h2><p>Veja nossa tecnologia em ação.</p></div>
                 <div class="video-container"><iframe src="https://www.youtube.com/embed/SEU_VIDEO_ID_AQUI" title="Vídeo Institucional Protech" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-            </div>
-        </section>
-
-        <section id="contato" class="contact">
-            <div class="container">
-                <div class="section-header"><h2>Entre em Contato</h2><p>Encaminhe um email para atendimento@protechengenharia.eng.br e entraremos em contato em breve.</p></div>
-                <div class="contact-wrapper">
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-row">
-                            <div class="form-group"><label for="name">Nome</label><input type="text" id="name" name="name" required placeholder="Seu nome completo"></div>
-                            <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" required placeholder="seu@email.com"></div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group"><label for="phone">Telefone (Opcional)</label><input type="tel" id="phone" name="phone" placeholder="(11) 99999-9999"></div>
-                            <div class="form-group"><label for="service">Tipo de Serviço</label><select id="service" name="service"><option value="">Selecione um serviço</option><option value="mapping">Mapeamento 3D</option><option value="inspection">Inspeção Predial</option><option value="thermal">Inspeção Termográfica</option><option value="other">Outro</option></select></div>
-                        </div>
-                        <div class="form-group"><label for="subject">Assunto</label><input type="text" id="subject" name="subject" required placeholder="Assunto da mensagem"></div>
-                        <div class="form-group"><label for="message">Mensagem</label><textarea id="message" name="message" required placeholder="Descreva sua necessidade..." rows="6"></textarea></div>
-                        <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
-                        <div id="formMessage" class="form-message"></div>
-                    </form>
-                </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-section"><h3>Protech Engenharia</h3><p>Soluções inovadoras em Aerolevantamento, mapeamento 3D, inspeção predial e termográfica com drones.</p></div>
-                <div class="footer-section"><h4>Links Rápidos</h4><ul><li><a href="#servicos">Serviços</a></li><li><a href="#portfolio">Portfólio</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#contato">Contato</a></li></ul></div>
-                <div class="footer-section"><h4>Contato</h4><ul><li>📞 (88) 99747.9021</li><li>✉️ atendimento@protechengenharia.eng.br</li><li>📍 Juazeiro do Norte, CE</li></ul></div>
+    <div id="modalServico" class="modal">
+        <div class="modal-conteudo modal-conteudo-servico">
+            <button class="fechar-modal">&times;</button>
+            <div class="modal-img-container">
+                <img id="imgModal" src="" alt="Detalhe do Serviço">
             </div>
-            <div class="footer-bottom"><p>&copy; <span id="year"></span> Protech Engenharia. Todos os direitos reservados.</p></div>
+            <div class="modal-corpo">
+                <h3 id="tituloModal">Título do Serviço</h3>
+                <p id="descModal">Descrição detalhada...</p>
+                <button id="btnContratarEspecifico" class="btn btn-primario w-100">Quero Contratar este Serviço</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalContato" class="modal">
+        <div class="modal-conteudo modal-conteudo-contato">
+            <button class="fechar-modal fechar-contato">&times;</button>
+            <h3>Fale com um Especialista</h3>
+            <p>Preencha os dados abaixo para receber um orçamento rápido.</p>
+            
+            <form class="form-contato" id="formContato">
+                <div class="grupo-form">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
+                </div>
+                <div class="grupo-form">
+                    <label for="email">E-mail Corporativo</label>
+                    <input type="email" id="email" name="email" required placeholder="seu@email.com">
+                </div>
+                <div class="grupo-form">
+                    <label for="telefone">WhatsApp / Telefone</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(DDD) 99999-9999">
+                </div>
+                <div class="grupo-form">
+                    <label for="selectServico">Serviço de Interesse</label>
+                    <select id="selectServico" name="servico" required>
+                        <option value="" disabled selected>Selecione uma opção</option>
+                        <option value="Mapeamento">Mapeamento 3D / Topografia</option>
+                        <option value="Inspecao">Inspeção Predial / Fachadas</option>
+                        <option value="Termografia">Inspeção Termográfica</option>
+                        <option value="Outro">Outro / Consultoria Geral</option>
+                    </select>
+                </div>
+                <div class="grupo-form">
+                    <label for="mensagem">Detalhes do Projeto</label>
+                    <textarea id="mensagem" name="mensagem" required placeholder="Descreva brevemente sua necessidade..." rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primario w-100">Enviar Solicitação</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="rodape">
+        <div class="conteiner">
+            <div class="rodape-grid">
+                
+                <div class="rodape-coluna coluna-marca">
+                    <h3>Protech Engenharia</h3>
+                    <p>Inovação, precisão e segurança em inspeções aéreas com drones. Transformando dados em resultados.</p>
+                </div>
+                
+                <div class="rodape-coluna coluna-links">
+                    <h4>Navegação</h4>
+                    <ul class="rodape-links">
+                        <li><a href="#servicos">Nossos Serviços</a></li>
+                        <li><a href="#portfolio">Portfólio</a></li>
+                        <li><a href="#sobre">Quem Somos</a></li>
+                        <li><a href="#" class="btn-abrir-contato">Solicitar Orçamento</a></li>
+                    </ul>
+                </div>
+
+                <div class="rodape-coluna coluna-contato">
+                    <h4>Contato</h4>
+                    <ul class="lista-contato">
+                        <li>
+                            <span class="icone">📍</span>
+                            <span class="texto">Juazeiro do Norte, CE</span>
+                        </li>
+                        <li>
+                            <span class="icone">✉️</span>
+                            <span class="texto">atendimento@protechengenharia.eng.br</span>
+                        </li>
+                        <li>
+                            <span class="icone">📞</span>
+                            <span class="texto">(88) 99747.9021</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="rodape-inferior">
+                <p>&copy; <span id="ano"></span> Protech Engenharia. Todos os direitos reservados.</p>
+            </div>
         </div>
     </footer>
     <script src="js/script.js"></script>
