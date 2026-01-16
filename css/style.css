@@ -190,11 +190,19 @@ section { padding: 6rem 0; }
 .portfolio-acao { 
     text-align: center; 
     margin: 3rem auto 0; 
-    padding: 2.5rem; 
+    padding: 3rem; /* Aumentei um pouco o padding interno */
     background: rgba(6, 182, 212, 0.05); 
     border-radius: var(--arredondamento); 
     border: 1px solid var(--destaque); 
-    max-width: 1000px; /* Largura máxima para alinhar com o vídeo */
+    max-width: 1000px; 
+}
+
+/* ESSA É A PARTE QUE FALTAVA PARA SEPARAR O TEXTO DO BOTÃO */
+.portfolio-acao p {
+    margin-bottom: 2rem; /* Espaço de 32px entre o texto e o botão */
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 500;
 }
 
 /* ==========================================================================
