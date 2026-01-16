@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossos Serviços - Protech</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="conteiner">
+            <div class="cabecalho-conteudo">
+                <a href="index.html" class="logo-texto">PROTECH ENGENHARIA</a>
+                <nav class="nav-desktop">
+                    <a href="index.html">Início</a>
+                    <a href="portfolio.html">Portfólio</a>
+                    <button class="btn-nav btn-abrir-contato">Solicitar Orçamento</button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="pagina-titulo revelar">
+            <div class="conteiner"><h1>Soluções Especializadas</h1></div>
+        </section>
+
+        <section class="detalhe-servico revelar">
+            <div class="conteiner">
+                <div class="detalhe-grid">
+                    <div class="detalhe-img"><img src="assets/MDT.png" alt="Mapeamento 3D"></div>
+                    <div class="detalhe-texto">
+                        <h2>Mapeamento 3D</h2>
+                        <p>Modelos digitais de terreno de alta precisão para engenharia e topografia.</p>
+                        <button class="btn btn-primario btn-contratar-servico" data-valor="Mapeamento">Orçamento Mapeamento</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="detalhe-servico revelar">
+            <div class="conteiner">
+                <div class="detalhe-grid">
+                    <div class="detalhe-img"><img src="assets/Estrutura.JPG" alt="Inspeção"></div>
+                    <div class="detalhe-texto">
+                        <h2>Inspeção Predial</h2>
+                        <p>Análise de fachadas e estruturas em altura com segurança e fotos 4K.</p>
+                        <button class="btn btn-primario btn-contratar-servico" data-valor="Inspecao">Orçamento Inspeção</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="detalhe-servico revelar">
+            <div class="conteiner">
+                <div class="detalhe-grid">
+                    <div class="detalhe-img"><img src="assets/Termografia.png" alt="Termografia"></div>
+                    <div class="detalhe-texto">
+                        <h2>Termografia</h2>
+                        <p>Identificação de falhas elétricas e infiltrações invisíveis a olho nu.</p>
+                        <button class="btn btn-primario btn-contratar-servico" data-valor="Termografia">Orçamento Termografia</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="modalContato" class="modal">
+        <div class="modal-conteudo modal-conteudo-contato">
+            <button class="fechar-modal fechar-contato">&times;</button>
+            <div class="modal-header-logo">PROTECH ENGENHARIA</div>
+            <h3>Solicitar Orçamento</h3>
+            <form class="form-contato">
+                <input type="text" placeholder="Nome" required>
+                <input type="tel" placeholder="Telefone" required>
+                <select required>
+                    <option value="" disabled selected>Selecione...</option>
+                    <option value="Mapeamento">Mapeamento 3D</option>
+                    <option value="Inspecao">Inspeção Predial</option>
+                    <option value="Termografia">Termografia</option>
+                </select>
+                <textarea placeholder="Mensagem" rows="3"></textarea>
+                <button type="submit" class="btn btn-primario w-100">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

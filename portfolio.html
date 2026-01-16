@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Protech</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="conteiner">
+            <div class="cabecalho-conteudo">
+                <a href="index.html" class="logo-texto">PROTECH ENGENHARIA</a>
+                <nav class="nav-desktop">
+                    <a href="index.html">Início</a>
+                    <a href="servicos.html">Serviços</a>
+                    <button class="btn-nav btn-abrir-contato">Solicitar Orçamento</button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="pagina-titulo revelar">
+            <div class="conteiner"><h1>Nosso Portfólio</h1></div>
+        </section>
+
+        <section class="portfolio">
+            <div class="conteiner">
+                
+                <div class="portfolio-filtros revelar">
+                    <div class="campo-busca">
+                        <input type="text" placeholder="Buscar projeto por nome ou local...">
+                    </div>
+                    <div class="campo-filtro">
+                        <select required>
+                            <option value="" disabled selected>Selecione uma opção</option>
+                            <option value="Mapeamento">Mapeamento 3D / Topografia</option>
+                            <option value="Inspecao">Inspeção Predial / Fachadas</option>
+                            <option value="Termografia">Inspeção Termográfica</option>
+                            <option value="Consultoria">Outro / Consultoria Geral</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="portfolio-grid">
+                    <div class="cartao-portfolio revelar">
+                        <div class="portfolio-imagem"><img src="assets/MDT.png" alt="Projeto 1"></div>
+                        <div class="portfolio-conteudo"><h3>Mapeamento Urbano</h3><p>Fortaleza - CE</p></div>
+                    </div>
+                    <div class="cartao-portfolio revelar">
+                        <div class="portfolio-imagem"><img src="assets/Ortomosaico.jpg" alt="Projeto 2"></div>
+                        <div class="portfolio-conteudo"><h3>Levantamento Aéreo</h3><p>Sobral - CE</p></div>
+                    </div>
+                    <div class="cartao-portfolio revelar">
+                        <div class="portfolio-imagem"><img src="assets/Termografia.png" alt="Projeto 3"></div>
+                        <div class="portfolio-conteudo"><h3>Inspeção Solar</h3><p>Juazeiro do Norte - CE</p></div>
+                    </div>
+                    <div class="cartao-portfolio revelar">
+                        <div class="portfolio-imagem"><img src="assets/Estrutura.JPG" alt="Projeto 4"></div>
+                        <div class="portfolio-conteudo"><h3>Laudo Estrutural</h3><p>Recife - PE</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contato-pagina revelar">
+            <div class="conteiner">
+                <div class="contato-wrapper">
+                    <h2>Gostou do que viu? Vamos conversar.</h2>
+                    <form id="formContatoPagina">
+                        <input type="text" placeholder="Seu nome completo" required>
+                        <input type="email" placeholder="Seu melhor e-mail" required>
+                        <textarea placeholder="Fale um pouco sobre o seu projeto..." rows="4" required></textarea>
+                        <button type="submit" class="btn btn-primario w-100">Iniciar Projeto</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="modalContato" class="modal">
+        <div class="modal-conteudo modal-conteudo-contato">
+            <button class="fechar-modal fechar-contato">&times;</button>
+            <div class="modal-header-logo">PROTECH ENGENHARIA</div>
+            <h3>Solicitar Orçamento</h3>
+            <form class="form-contato">
+                <input type="text" placeholder="Nome" required>
+                <input type="tel" placeholder="Telefone" required>
+                    <select required>
+                        <option value="" disabled selected>Selecione uma opção</option>
+                        <option value="Mapeamento">Mapeamento 3D / Topografia</option>
+                        <option value="Inspecao">Inspeção Predial / Fachadas</option>
+                        <option value="Termografia">Inspeção Termográfica</option>
+                        <option value="Consultoria">Outro / Consultoria Geral</option>
+                    </select>
+                <textarea placeholder="Mensagem" rows="3"></textarea>
+                <button type="submit" class="btn btn-primario w-100">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="rodape">
+        <div class="conteiner">
+            <div class="rodape-inferior"><p>&copy; <span id="ano"></span> Protech Engenharia.</p></div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
