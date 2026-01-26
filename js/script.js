@@ -74,4 +74,33 @@ document.addEventListener('DOMContentLoaded', function() {
     // ANO FOOTER
     const ano = document.getElementById('ano');
     if(ano) ano.textContent = new Date().getFullYear();
+
+    // --- ENVIAR PARA WHATSAPP (NOVO) ---
+    const form = document.getElementById('formContato');
+    if(form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Pega os valores
+            const nome = form.querySelector('input[type="text"]').value;
+            const campoEmail = form.querySelector('input[type="email"]');
+            const email = campoEmail ? campoEmail.value : "Não informado";
+            const telefone = form.querySelector('input[type="tel"]').value;
+            const servico = document.getElementById('selectServicoModal').value;
+            const textarea = form.querySelector('textarea');
+            const mensagem = textarea ? textarea.value : "";
+            
+            // Cria a mensagem do Zap (Codificada para URL)
+            const textoZap = `*Olá,* 👋%0A` +
+                             `Me chamo *${nome}*.%0A` +
+                             `Gostaria de um orçamento para: *${servico}*.%0A` +
+                             `---------------------------------%0A` +
+                             `*Contato:* ${telefone}%0A` +
+                             `*Email:* ${email}%0A` +
+                             `*Detalhes:* ${mensagem}`;
+            
+            // Abre o WhatsApp (Número da Thayna/Empresa configurado no footer: 5588997479021)
+            window.open(`https://wa.me/5588997479021?text=${textoZap}`, '_blank');
+        });
+    }
 });

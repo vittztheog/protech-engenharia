@@ -33,7 +33,7 @@
                     <div class="detalhe-texto">
                         <h2>Mapeamento 3D</h2>
                         <p>Modelos digitais de terreno de alta precisão para engenharia e topografia.</p>
-                        <button class="btn btn-primario btn-contratar-servico" data-valor="Mapeamento">Orçamento Mapeamento</button>
+                        <button class="btn btn-primario btn-contratar-servico" data-service="Mapeamento">Orçamento Mapeamento</button>
                     </div>
                 </div>
             </div>
@@ -46,7 +46,7 @@
                     <div class="detalhe-texto">
                         <h2>Inspeção Predial</h2>
                         <p>Análise de fachadas e estruturas em altura com segurança e fotos 4K.</p>
-                        <button class="btn btn-primario btn-contratar-servico" data-valor="Inspecao">Orçamento Inspeção</button>
+                        <button class="btn btn-primario btn-contratar-servico" data-service="Inspecao">Orçamento Inspeção</button>
                     </div>
                 </div>
             </div>
@@ -59,7 +59,7 @@
                     <div class="detalhe-texto">
                         <h2>Termografia</h2>
                         <p>Identificação de falhas elétricas e infiltrações invisíveis a olho nu.</p>
-                        <button class="btn btn-primario btn-contratar-servico" data-valor="Termografia">Orçamento Termografia</button>
+                        <button class="btn btn-primario btn-contratar-servico" data-service="Termografia">Orçamento Termografia</button>
                     </div>
                 </div>
             </div>
@@ -71,17 +71,17 @@
             <button class="fechar-modal fechar-contato">&times;</button>
             <div class="modal-header-logo">PROTECH ENGENHARIA</div>
             <h3>Solicitar Orçamento</h3>
-            <form class="form-contato">
+            <form class="form-contato" id="formContato">
                 <input type="text" placeholder="Nome" required>
                 <input type="tel" placeholder="Telefone" required>
-                <select required>
+                <select id="selectServicoModal" required>
                     <option value="" disabled selected>Selecione...</option>
                     <option value="Mapeamento">Mapeamento 3D</option>
                     <option value="Inspecao">Inspeção Predial</option>
                     <option value="Termografia">Termografia</option>
                 </select>
                 <textarea placeholder="Mensagem" rows="3"></textarea>
-                <button type="submit" class="btn btn-primario w-100">Enviar</button>
+                <button type="submit" class="btn btn-primario w-100">Enviar via WhatsApp</button>
             </form>
         </div>
     </div>

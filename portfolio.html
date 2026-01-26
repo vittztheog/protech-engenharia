@@ -28,38 +28,22 @@
 
         <section class="portfolio">
             <div class="conteiner">
-                
-                <div class="portfolio-filtros revelar">
-                    <div class="campo-busca">
-                        <input type="text" placeholder="Buscar projeto por nome ou local...">
-                    </div>
-                    <div class="campo-filtro">
-                        <select required>
-                            <option value="" disabled selected>Selecione uma opção</option>
-                            <option value="Mapeamento">Mapeamento 3D / Topografia</option>
-                            <option value="Inspecao">Inspeção Predial / Fachadas</option>
-                            <option value="Termografia">Inspeção Termográfica</option>
-                            <option value="Consultoria">Outro / Consultoria Geral</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="portfolio-grid">
-                    <div class="cartao-portfolio revelar">
-                        <div class="portfolio-imagem"><img src="assets/MDT.png" alt="Projeto 1"></div>
-                        <div class="portfolio-conteudo"><h3>#</h3><p>#</p></div>
-                    </div>
+                <div class="portfolio-grid" style="margin-top: 3rem;">
                     <div class="cartao-portfolio revelar">
                         <div class="portfolio-imagem"><img src="assets/Ortomosaico.jpg" alt="Projeto 2"></div>
-                        <div class="portfolio-conteudo"><h3>Levantamento Aéreo</h3><p>#</p></div>
+                        <div class="portfolio-conteudo"><h3>Levantamento Aéreo</h3><p>Mapeamento de alta precisão em área rural.</p></div>
                     </div>
                     <div class="cartao-portfolio revelar">
                         <div class="portfolio-imagem"><img src="assets/Termografia.png" alt="Projeto 3"></div>
-                        <div class="portfolio-conteudo"><h3>Termografia</h3><p>#</p></div>
+                        <div class="portfolio-conteudo"><h3>Termografia</h3><p>Inspeção de painéis solares e sistemas elétricos.</p></div>
                     </div>
                     <div class="cartao-portfolio revelar">
                         <div class="portfolio-imagem"><img src="assets/Estrutura.JPG" alt="Projeto 4"></div>
-                        <div class="portfolio-conteudo"><h3>Laudo Estrutural</h3><p>#</p></div>
+                        <div class="portfolio-conteudo"><h3>Laudo Estrutural</h3><p>Inspeção visual de patologias em estrutura de concreto.</p></div>
+                    </div>
+                    <div class="cartao-portfolio revelar">
+                        <div class="portfolio-imagem"><img src="assets/MDT.png" alt="Projeto 1"></div>
+                        <div class="portfolio-conteudo"><h3>Topografia</h3><p>Geração de curvas de nível e MDT.</p></div>
                     </div>
                 </div>
             </div>
@@ -69,12 +53,7 @@
             <div class="conteiner">
                 <div class="contato-wrapper">
                     <h2>Gostou do que viu? Vamos conversar.</h2>
-                    <form id="formContatoPagina">
-                        <input type="text" placeholder="Seu nome completo" required>
-                        <input type="email" placeholder="Seu melhor e-mail" required>
-                        <textarea placeholder="Fale um pouco sobre o seu projeto..." rows="4" required></textarea>
-                        <button type="submit" class="btn btn-primario w-100">Iniciar Projeto</button>
-                    </form>
+                    <button class="btn btn-primario w-100 btn-abrir-contato">Solicitar Orçamento Personalizado</button>
                 </div>
             </div>
         </section>
@@ -86,18 +65,19 @@
             <button class="fechar-modal fechar-contato">&times;</button>
             <div class="modal-header-logo">PROTECH ENGENHARIA</div>
             <h3>Solicitar Orçamento</h3>
-            <form class="form-contato">
+            <form class="form-contato" id="formContato">
                 <input type="text" placeholder="Nome" required>
                 <input type="tel" placeholder="Telefone" required>
-                    <select required>
-                        <option value="" disabled selected>Selecione uma opção</option>
-                        <option value="Mapeamento">Mapeamento 3D / Topografia</option>
-                        <option value="Inspecao">Inspeção Predial / Fachadas</option>
-                        <option value="Termografia">Inspeção Termográfica</option>
-                        <option value="Consultoria">Outro / Consultoria Geral</option>
-                    </select>
+                <input type="email" placeholder="Email (Opcional)">
+                <select id="selectServicoModal" required>
+                    <option value="" disabled selected>Selecione uma opção</option>
+                    <option value="Mapeamento">Mapeamento 3D / Topografia</option>
+                    <option value="Inspecao">Inspeção Predial / Fachadas</option>
+                    <option value="Termografia">Inspeção Termográfica</option>
+                    <option value="Consultoria">Outro / Consultoria Geral</option>
+                </select>
                 <textarea placeholder="Mensagem" rows="3"></textarea>
-                <button type="submit" class="btn btn-primario w-100">Enviar</button>
+                <button type="submit" class="btn btn-primario w-100">Enviar via WhatsApp</button>
             </form>
         </div>
     </div>
